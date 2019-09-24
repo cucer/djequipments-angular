@@ -1,0 +1,41 @@
+<div class='container searchContainer'>
+  <div class='search card card-body bg-primary text-white mb-3'>
+    <h1>{{pageTitle}}</h1>
+    <p class='lead'>Enter a equipment name <br>(CDJ-2000NXS2, DJM-900NXS2, DDJ-1000SRT etc.)</p>
+    <div class='row'>
+      <div class='col-md-7'>
+        <input type='text' [(ngModel)]='listFilter' id='searchEquipment' class='form-control' placeholder='Enter a equipment name here...'>
+      </div>
+      <!-- <div class='col-md-2 bg-secondary'>Search</div> -->
+    </div>  
+  </div>       
+  <br>
+  <div id='equipment' *ngIf='equipments && equipments.length'>         
+    <div class='card card-body mb-3' *ngFor='let eq of filteredEquipments'>
+      <div class='row'>
+
+        <div class='col-md-3'>
+          <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
+          <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
+        </div>
+        
+        <div class='col-md-9'>
+          <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
+          <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
+          <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
+          <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
+          <br><br>
+          <ul class='list-group'>
+            <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
+            <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
+            <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
+            <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+            <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
+            <li class='list-group-item'><span style='color:red'>Play Format: </span>{{ eq.playFormat }}</li>
+            <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>
+            <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+          </ul>
+        </div>     
+      </div>        
+    </div>
+</div>

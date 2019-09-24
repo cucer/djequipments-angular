@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'djequipments-angular';
+  pageTitle: string = 'DJ Equipment Finder';
+  pageFooter: string = 'DJ Equipment Finder \u00A9';
 }

@@ -21,8 +21,8 @@ import { EquipmentsComponent } from './equipments/equipments.component';
     RouterModule.forRoot([
       { path: 'main', component: MainpageComponent },
       { path: 'equipments', component: EquipmentsComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
+      { path: '', redirectTo: 'main', pathMatch: 'full'},
+      { path: '**', redirectTo: 'main', pathMatch: 'full'}
     ])
     
   ],

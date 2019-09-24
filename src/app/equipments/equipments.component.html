@@ -8,34 +8,131 @@
       </div>
       <!-- <div class='col-md-2 bg-secondary'>Search</div> -->
     </div>  
-  </div>       
-  <br>
-  <div id='equipment' *ngIf='equipments && equipments.length'>         
-    <div class='card card-body mb-3' *ngFor='let eq of filteredEquipments'>
-      <div class='row'>
+  </div>  
 
-        <div class='col-md-3'>
-          <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
-          <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
-        </div>
+  <br>
+
+  <div id='equipment'>
+    <!-- Player -->
+    <!-- <div *ngIf='players && players.length'> -->
+    <div *ngIf='isPlayer'>
+      <div class='card card-body mb-3' *ngFor='let eq of filteredPlayers'>
+        <div class='row'>
+          <div class='col-md-3'>
+            <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
+            <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
+          </div>
         
-        <div class='col-md-9'>
-          <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
-          <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
-          <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
-          <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
-          <br><br>
-          <ul class='list-group'>
-            <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
-            <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
-            <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
-            <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
-            <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
-            <li class='list-group-item'><span style='color:red'>Play Format: </span>{{ eq.playFormat }}</li>
-            <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>
-            <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
-          </ul>
-        </div>     
-      </div>        
-    </div>
-</div>
+          <div class='col-md-9'>
+            <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
+            <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
+            <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
+            <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
+            <br><br>
+            <ul class='list-group'>
+              <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
+              <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
+              <li class='list-group-item'><span style='color:red'>Play Format: </span>{{ eq.playFormat }}</li>
+              <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>
+              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+            </ul>
+          </div>     
+        </div>        
+      </div>
+    </div>         
+
+    <!-- Mixer -->
+    <div *ngIf='isMixer'>
+      <div class='card card-body mb-3' *ngFor='let eq of filteredMixers'>
+        <div class='row'>    
+          <div class='col-md-3'>
+            <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
+            <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
+          </div>
+            
+          <div class='col-md-9'>
+            <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
+            <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
+            <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
+            <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
+            <br><br>
+            <ul class='list-group'>
+              <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
+              <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
+              <li class='list-group-item'><span style='color:red'>Channels: </span>{{ eq.channels }}</li>
+              <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
+              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+            </ul>
+          </div>     
+        </div>        
+      </div>
+    </div>      
+
+    <!-- Controller -->
+    <div *ngIf='isController'>
+      <div class='card card-body mb-3' *ngFor='let eq of filteredControllers'>
+        <div class='row'>    
+          <div class='col-md-3'>
+            <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
+            <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
+          </div>
+              
+          <div class='col-md-9'>
+            <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
+            <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
+            <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
+            <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
+            <br><br>
+            <ul class='list-group'>
+              <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
+              <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
+              <li class='list-group-item'><span style='color:red'>Channels: </span>{{ eq.channels }}</li>
+              <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
+              <li class='list-group-item'><span style='color:red'>Hot Cues: </span>{{ eq.hotCues }}</li>
+              <li class='list-group-item'><span style='color:red'>Software: </span>{{ eq.software }}</li>
+              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+            </ul>
+          </div>     
+        </div>        
+      </div>
+    </div>      
+
+    <!-- Turntable -->
+    <div *ngIf='isTurntable'>
+      <div class='card card-body mb-3' *ngFor='let eq of filteredTurntables'>
+        <div class='row'>    
+          <div class='col-md-3'>
+            <img class='img-fluid mb-2' src='assets/img/{{eq.id}}.jpg'>
+            <a href='{{ eq.url }}' target="_blank" class='btn btn-primary btn-block mb-4'>View Equipment</a>
+          </div>
+                
+          <div class='col-md-9'>
+            <span class='badge badge-pill badge-primary'>Brand ID: {{ eq.brandId }}</span>
+            <span class='badge badge-pill badge-secondary'>Equipment ID: {{ eq.id }}</span>
+            <span class='badge badge-pill badge-success'>Dimensions: {{ eq.dimensions }}</span>
+            <span class='badge badge-pill badge-info'>Weight: {{ eq.weight }}</span>
+            <br><br>
+            <ul class='list-group'>
+              <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
+              <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Arm: </span>{{ eq.arm }}</li>
+              <li class='list-group-item'><span style='color:red'>Motor: </span>{{ eq.motor }}</li>
+              <li class='list-group-item'><span style='color:red'>Torque: </span>{{ eq.torque }}</li>
+              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+            </ul>
+          </div>     
+        </div>        
+      </div>
+    </div>  
+
+  </div>

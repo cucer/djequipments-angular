@@ -12,11 +12,11 @@ export interface IEquipment {
     fileSupport: string;
     starRating: number;
     url: string;
-    // channels: number;
-    // effects: string;
-    // hotCues: number;
-    // software: string;
-    // arm: string;
-    // motor: string;
-    // torque: string;
+    channels: number;
+    effects: string;
+    hotCues: number;
+    software: string;
+    arm: string;
+    motor: string;
+    torque: string;
 }

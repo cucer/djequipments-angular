@@ -1,4 +1,5 @@
 export interface IEquipment {
+
     id: number;
     name: string;
     brandId: number;
@@ -19,4 +20,5 @@ export interface IEquipment {
     arm: string;
     motor: string;
     torque: string;
+    
 }

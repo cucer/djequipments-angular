@@ -36,8 +36,11 @@
               <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs  | convertToSpaces: '"'}}</li>
               <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
               <li class='list-group-item'><span style='color:red'>Play Format: </span>{{ eq.playFormat }}</li>
-              <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>
-              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+              <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>              
+              <!-- <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li> --> <!-- Nested hale dondurduk -->              
+              <!-- Nested component yaptik app-star, ratingi input olarak iceri Input()gonderdik, ratingClicked disari Output() gonderdik-->
+              <li class='list-group-item'><span style='color:red'>Stars: </span><app-star [rating]='eq.starRating'></app-star></li>
+              
             </ul>
           </div>     
         </div>        

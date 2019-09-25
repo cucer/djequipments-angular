@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'; // directives, pipes, NgIf, NgForOf vb. icin kullanilir
-import { FormsModule } from '@angular/forms';  //app moduleden tasindi
+// import { CommonModule } from '@angular/common';  // artık shared module de tanimli, buraya gerek yok
+// import { FormsModule } from '@angular/forms';    // artık shared module de tanimli, buraya gerek yok
 
 import { EquipmentsComponent } from './equipments.component'; //app moduleden tasindi
 import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe'; //app moduleden tasindi
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -16,8 +17,9 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe'; //app mo
     RouterModule.forChild([
       { path: 'equipments', component: EquipmentsComponent }
     ]),    
-    FormsModule,  //app moduleden tasindi
-    CommonModule
+    // FormsModule,  // artık shared module de tanimli, buraya gerek yok
+    // CommonModule, // artık shared module de tanimli, buraya gerek yok
+    SharedModule
   ]
 })
 export class EquipmentModule { }

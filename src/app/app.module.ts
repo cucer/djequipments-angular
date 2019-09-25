@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router'
-// import { FormsModule } from '@angular/forms';  //equipment module altina tasindi
+// import { FormsModule } from '@angular/forms';  //shared module altina tasindi
 
 import { AppComponent } from './app.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -20,15 +20,14 @@ import { EquipmentModule } from './equipments/equipment.module'; //kendi module 
   imports: [
     BrowserModule,
     HttpClientModule,
-    // FormsModule,  //equipment module altina tasindi
+    // FormsModule,  //shared module altina tasindi
     RouterModule.forRoot([
       { path: 'main', component: MainpageComponent },
-      // { path: 'equipments', component: EquipmentsComponent },
+      // { path: 'equipments', component: EquipmentsComponent }, //equipment module altina forChild olarak tasindi
       { path: '', redirectTo: 'main', pathMatch: 'full'},
       { path: '**', redirectTo: 'main', pathMatch: 'full'}
     ]),
-    EquipmentModule //kendi module altinda calisacak
-    
+    EquipmentModule //kendi module altinda calisacak    
   ],
   providers: [],
   bootstrap: [AppComponent]

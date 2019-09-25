@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 // import { EquipmentsComponent } from './equipments/equipments.component'; //equipment module altina tasindi
 import { EquipmentModule } from './equipments/equipment.module'; //kendi module altinda calisacak
+// import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';  //equipment module altina tasindi
 
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
-    // EquipmentsComponent //equipment module altina tasindi
+    // ConvertToSpacesPipe, //equipment module altina tasindi
+    // EquipmentsComponent  //equipment module altina tasindi
   ],
   imports: [
     BrowserModule,

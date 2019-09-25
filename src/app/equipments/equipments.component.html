@@ -32,8 +32,8 @@
             <ul class='list-group'>
               <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
               <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
-              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
-              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs | convertToSpaces: '"'}}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs  | convertToSpaces: '"'}}</li>
               <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
               <li class='list-group-item'><span style='color:red'>Play Format: </span>{{ eq.playFormat }}</li>
               <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>
@@ -62,8 +62,8 @@
             <ul class='list-group'>
               <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
               <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
-              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
-              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs | convertToSpaces: '"'}}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs | convertToSpaces: '"'}}</li>
               <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
               <li class='list-group-item'><span style='color:red'>Channels: </span>{{ eq.channels }}</li>
               <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
@@ -92,8 +92,8 @@
             <ul class='list-group'>
               <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
               <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
-              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs }}</li>
-              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Inputs: </span>{{ eq.inputs | convertToSpaces: '"'}}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs | convertToSpaces: '"'}}</li>
               <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
               <li class='list-group-item'><span style='color:red'>Channels: </span>{{ eq.channels }}</li>
               <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
@@ -124,7 +124,7 @@
             <ul class='list-group'>
               <li class='list-group-item'><span style='color:red'>Company: </span>{{ eq.brandName }}</li>
               <li class='list-group-item'><span style='color:red'>Name: </span>{{ eq.name }}</li>
-              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs }}</li>
+              <li class='list-group-item'><span style='color:red'>Outputs: </span>{{ eq.outputs | convertToSpaces: '"'}}</li>
               <li class='list-group-item'><span style='color:red'>Arm: </span>{{ eq.arm }}</li>
               <li class='list-group-item'><span style='color:red'>Motor: </span>{{ eq.motor }}</li>
               <li class='list-group-item'><span style='color:red'>Torque: </span>{{ eq.torque }}</li>

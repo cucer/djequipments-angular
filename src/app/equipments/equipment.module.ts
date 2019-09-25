@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common'; // directives, pipes, NgIf, NgFo
 import { FormsModule } from '@angular/forms';  //app moduleden tasindi
 
 import { EquipmentsComponent } from './equipments.component'; //app moduleden tasindi
+import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe'; //app moduleden tasindi
 
 
 @NgModule({
   declarations: [
-    EquipmentsComponent //app moduleden tasindi
+    EquipmentsComponent, //app moduleden tasindi
+    ConvertToSpacesPipe //app moduleden tasindi
   ],
   imports: [
     RouterModule.forChild([

@@ -11,7 +11,7 @@ import { StarComponent } from './star.component';
   imports: [
     CommonModule
   ],
-  exports: [ //Shared edilen componentler burada export edilebilir, bu sayede SharedModule ekli olan module lerde kullanılabilir
+  exports: [ //Diger componentlere Shared etmek istedigimiz seyleri burada export edebiliriz, bu sayede SharedModule ekli olan module lerde kullanılabilir
     FormsModule,  //bunu buraya ekledik equipment.module altında tekrar tanımlama gerek yok, at shared e heryerde kullan
     CommonModule, //bunu buraya ekledik equipment.module altında tekrar tanımlama gerek yok, at shared e heryerde kullan
     StarComponent

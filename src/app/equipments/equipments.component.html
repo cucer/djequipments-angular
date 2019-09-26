@@ -39,8 +39,8 @@
               <li class='list-group-item'><span style='color:red'>File Support: </span>{{ eq.fileSupport }}</li>              
               <!-- <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li> --> <!-- Nested hale dondurduk -->              
               <!-- Nested component yaptik app-star, ratingi input olarak iceri Input()gonderdik, ratingClicked disari Output() gonderdik-->
-              <li class='list-group-item'><span style='color:red'>Stars: </span><app-star [rating]='eq.starRating'></app-star></li>
-              
+              <!-- <li class='list-group-item'><span style='color:red'>Stars: </span><app-star [rating]='eq.starRating'></app-star></li> -->
+              <li class='list-group-item'><app-star [rating]='eq.starRating'></app-star></li>                       
             </ul>
           </div>     
         </div>        
@@ -70,7 +70,8 @@
               <li class='list-group-item'><span style='color:red'>USB: </span>{{ eq.usb }}</li>
               <li class='list-group-item'><span style='color:red'>Channels: </span>{{ eq.channels }}</li>
               <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
-              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+              <!-- <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li> -->
+              <li class='list-group-item'><app-star [rating]='eq.starRating'></app-star></li>
             </ul>
           </div>     
         </div>        
@@ -102,7 +103,8 @@
               <li class='list-group-item'><span style='color:red'>Effects: </span>{{ eq.effects }}</li>
               <li class='list-group-item'><span style='color:red'>Hot Cues: </span>{{ eq.hotCues }}</li>
               <li class='list-group-item'><span style='color:red'>Software: </span>{{ eq.software }}</li>
-              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+              <!-- <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li> -->
+              <li class='list-group-item'><app-star [rating]='eq.starRating'></app-star></li>
             </ul>
           </div>     
         </div>        
@@ -131,7 +133,8 @@
               <li class='list-group-item'><span style='color:red'>Arm: </span>{{ eq.arm }}</li>
               <li class='list-group-item'><span style='color:red'>Motor: </span>{{ eq.motor }}</li>
               <li class='list-group-item'><span style='color:red'>Torque: </span>{{ eq.torque }}</li>
-              <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li>
+              <!-- <li class='list-group-item'><span style='color:red'>Stars: </span>{{ eq.starRating }}</li> -->
+              <li class='list-group-item'><app-star [rating]='eq.starRating'></app-star></li>
             </ul>
           </div>     
         </div>        
